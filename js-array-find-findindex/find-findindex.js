@@ -33,5 +33,11 @@ removeUser(users, 'akagen') // undefined
 */
 
 function removeUser(usersArray, username) {
-  
+  const userToDel =  usersArray.findIndex(function(value, index, arr){
+    return value.username === username;
+  });
+  if(userToDel === -1){
+    return;
+  }
+  return usersArray.splice(userToDel,1)[0];
 }
