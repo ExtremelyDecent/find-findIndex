@@ -13,10 +13,9 @@ findUserByUsername(users, 'taco') // undefined
 
 
 function findUserByUsername(usersArray, username) {
-  const user = usersArray.findIndex(function(value, index, arr){
+  return usersArray.find(function(value, index, arr){
     return value.username === username;
   });
-  return usersArray[user];
   
 }
 
